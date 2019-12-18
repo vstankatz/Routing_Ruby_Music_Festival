@@ -1,0 +1,15 @@
+<h3><%= @stage.name %></h3>
+
+<% if @artists.any? %>
+  <ul>
+    <% @artists.sort_by(&:name).each do |artist| %>
+    <li><a href="/LOTR_Fest/<%= artist.id %>"><%= artist.name %></a></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>There are currently no performances to display.</p>
+  <% end %>
+
+  <a href="/LOTR_Fest/<%= @stage.id %>/new_artist">Add a Performer</a><br>
+
+<a href="LOTR_Fest/<%= @stage.id %>/edit">Edit Stage Info</a>

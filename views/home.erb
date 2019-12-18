@@ -1,0 +1,11 @@
+<% if @stages.any? %>
+  <ul>
+    <% @stages.sort_by(&:name).each do |stage| %>
+    <li><a href="/LOTR_Fest/<%= stage.id %>"><%= stage.name %></a></li>
+    <% end %>
+  </ul>
+  <% else %>
+  <p>There are currently no stages to display.</p>
+  <% end %>
+
+<a href="/LOTR_Fest/new_stage">Add a New Stage!</a>
