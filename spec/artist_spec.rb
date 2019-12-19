@@ -62,7 +62,7 @@ describe '#Artist' do
     it('should be able to update an artist') do
       artist1 = Artist.new("That One Guy", nil, "Psychedelic", @stage.id)
       artist1.save()
-      artist1.update("Rob Zombie", "Rawk", @stage.id)
+      artist1.update("Rob Zombie", "Rawk")
       expect(artist1.name).to(eq("Rob Zombie"))
     end
   end

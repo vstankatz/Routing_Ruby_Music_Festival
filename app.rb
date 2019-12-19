@@ -24,6 +24,7 @@ post('/LOTR_Fest') do
   name = params[:stage_name]
   location = params[:stage_location]
   date = params[:stage_date]
+  ##THIS IS WHERE A IF/ELSE WOULD GO TO PREVENT EMPTY INPUT
   stage = Stage.new(nil, name, location, date)
   stage.save()
   @stages = Stage.all()
@@ -56,6 +57,7 @@ post('/LOTR_Fest/:id') do
   @stage = Stage.find(params[:id].to_i)
   name = params[:artist_name]
   genre = params[:artist_genre]
+    ##THIS IS WHERE A IF/ELSE WOULD GO TO PREVENT EMPTY INPUT
   @artist = Artist.new(name, nil, genre, @stage.id)
   @artist.save()
   @artists = Artist.all()
