@@ -9,6 +9,12 @@
       <h1>The One Festival</h1>
       <h2>To Rule Them All</h2>
       <hr>
+      <% flash.keys.each do |type| %>
+  <div data-alert class="flash <%= type %> alert-box radius">
+    <%= flash[type] %>
+    <a href="#" class="close">&times;</a>
+  </div>
+<% end %>
       <%= yield %>
     </div>
   </body>
