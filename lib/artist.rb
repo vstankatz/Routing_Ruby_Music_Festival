@@ -40,10 +40,10 @@ class Artist
     Stage.find(self.stage_id)
   end
 
-  def update(name, genre, stage_id)
+  def update(name, genre)
     @name = name
     @genre = genre
-    @stage_id = stage_id
+    # @stage_id = stage_id
 
     @@artist_list[self.id] = Artist.new(self.name, self.id, self.genre, self.stage_id)
   end

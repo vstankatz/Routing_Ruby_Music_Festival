@@ -2,4 +2,6 @@
 
 <p><%= @artist.name %> will be performing at the <%= @stage.name %> on <%= @stage.date %></p>
 
-<a href="LOTR_Fest/<%= @stage.id %>/<%= @artist.id %>/edit">Edit Artist Info</a>
+<a href="/LOTR_Fest/<%= @stage.id %>/artist/<%= @artist.id %>/edit">Edit Artist Info</a><br>
+
+<a href="/LOTR_Fest">Back to Home</a>

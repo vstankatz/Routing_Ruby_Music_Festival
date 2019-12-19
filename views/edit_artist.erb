@@ -1,4 +1,4 @@
-<form action="/LOTR_Fest/<%=@stage.id %>" method="post">
+<form action="/LOTR_Fest/<%=@stage.id %>/artist/<%= @artist.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
 
   <div class="form-group">
@@ -6,16 +6,21 @@
     <input type="text" name="artist_name">
     <label for="artist_genre">Genre</label>
     <input type="text" name="artist_genre">
-    
+    <label for="stage_select"></label>
+
+
+
+
+
   </div>
-  <button type="submit"></button>
+  <button type="submit">Save Edit</button>
 
 </form>
 
-<form action="/LOTR_Fest" method="post">
+<form action="/LOTR_Fest/<%= @stage.id %>/artist/<%= @artist.id %>/edit" method="post">
   <input name="_method" type="hidden" value="delete">
 
-  <button type="submit">Delete song</button>
+  <button type="submit">Delete Artist</button>
 </form>
 
 <a href="/LOTR_Fest">Back to Home</a>

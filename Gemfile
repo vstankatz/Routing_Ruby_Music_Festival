@@ -5,3 +5,4 @@ gem('rspec')
 gem('pry')
 gem('capybara')
 gem('sinatra-contrib')
+gem 'rb-readline'

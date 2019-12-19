@@ -4,10 +4,10 @@ class Stage
   @@stages = {}
   @@total_rows = 0
   def initialize(id, name, location, date)
-      @id = id || @@total_rows += 1
-      @name = name
-      @location = location
-      @date = date
+    @id = id || @@total_rows += 1
+    @name = name
+    @location = location
+    @date = date
   end
 
   def self.all
@@ -19,8 +19,8 @@ class Stage
   end
 
   def ==(stage_to_compare)
-  self.name().downcase().eql?(stage_to_compare.name.downcase()) && self.location().downcase().eql?(stage_to_compare.location.downcase())&&self.date().downcase().eql?(stage_to_compare.date.downcase())
-end
+    self.name().downcase().eql?(stage_to_compare.name.downcase()) && self.location().downcase().eql?(stage_to_compare.location.downcase())&&self.date().downcase().eql?(stage_to_compare.date.downcase())
+  end
 
   def self.clear
     @@stages = {}
@@ -47,6 +47,8 @@ end
     @name = name
     @location = location
     @date = date
+
+    # @@stages[self.id] = Stage.new(self.id, self.name, self.location, self.date)
   end
 
   def delete
