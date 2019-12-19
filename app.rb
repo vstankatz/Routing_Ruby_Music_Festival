@@ -27,8 +27,10 @@ post('/LOTR_Fest') do
   ##THIS IS WHERE A IF/ELSE WOULD GO TO PREVENT EMPTY INPUT
   stage = Stage.new(nil, name, location, date)
   stage.save()
-  @stages = Stage.all()
-  erb(:home)
+  # @stages = Stage.all()
+  # erb(:home)
+  #^^ that is the old way of doing it, below is the new
+  redirect to('/LOTR_Fest')
 end
 
 # View Stage
